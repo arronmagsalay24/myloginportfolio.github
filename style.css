@@ -24,6 +24,7 @@ body {
 
 /* ---------- HEADER ---------- */
 header {
+    position:fixed;
     margin-top: 20px;
     top: 0;
     width: 100%;
@@ -32,7 +33,7 @@ header {
     filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     z-index: 100;
 }
 
@@ -235,9 +236,10 @@ nav a.active {
 /* ---------- SERVICES ---------- */
 #services {
     margin-bottom: 7rem;
-    padding: 80px 20px;
+    padding: 80px 150px;
     background-color: #1e1e1e;
     text-align: center;
+    margin-top: 7rem;
 }
 
 .section-title {
@@ -256,8 +258,16 @@ height: 4px; /* guhit kapal */
 background-color: #b74b4b;
 margin: 0.5rem auto 0; /* gitna */
 border-radius: 2px;
+animation: expandLine 1s ease forwards;
 }
-
+@keyframes expandLine {
+  from{
+    width: 0;
+  }
+  to{
+    width: 15%;
+  }
+}
 
 .services-grid {
     display: grid;
@@ -313,7 +323,7 @@ border-radius: 2px;
 /* ---------- SKILLS ---------- */
 #skills {
     margin-bottom: 7rem;
-    padding: 5rem 2rem;
+    padding: 80px 150px;
     text-align: center;
     background-color: #1e1e1e;
 }
