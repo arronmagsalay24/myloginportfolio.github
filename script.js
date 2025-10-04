@@ -1,6 +1,6 @@
 // --- Typing effect ---
 const typingText = document.querySelector('.typing');
-const texts = ["Web Developer", "Web Designer", "Web Security"]; // mga words na ipapakita
+const texts = ["Inspire Web Developer", "Inspire Frontend Developer", "Inspire Backend Developer"]; // mga words na ipapakita
 let textIndex = 0; // index sa array
 let charIndex = 0; // index sa bawat character
 
@@ -51,6 +51,9 @@ function revealServices() {
 
 window.addEventListener('scroll', revealServices);
 
+
+
+// --- Animate Skills ---
 const progressBars = document.querySelectorAll('.progress');
 
 function animateSkills() {
@@ -71,6 +74,8 @@ window.addEventListener('scroll', animateSkills);
 window.addEventListener('load', animateSkills);
 
 
+
+// --- Certificates Modal ---
 const certImages = document.querySelectorAll('.certificate-card img');
 
 certImages.forEach(img => {
@@ -83,4 +88,15 @@ certImages.forEach(img => {
 
     modal.querySelector('.close').onclick = () => modal.remove();
   });
+});
+
+
+
+// --- Hamburger Menu Toggle (idagdag ito) ---
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.querySelector('header nav');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  menuToggle.classList.toggle('open');
 });
